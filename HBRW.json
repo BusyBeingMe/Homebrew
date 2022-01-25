@@ -4,7 +4,7 @@
 			{
 				"json": "HBRW",
 				"abbreviation": "HBRW",
-				"full": "Homebrew",
+				"full": "My Homebrew",
 				"authors": [
 					"Thomas Johnston"
 				],
@@ -576,8 +576,8 @@
 					"items": [
 						"{@condition Bleeding|GH} - Grim Hollow",
 						"{@condition Dazed|GH} - Grim Hollow",
-						"{@condition Nauseated|HBRW} - Homebrew",
-						"{@condition Saturated|HBRW} - Homebrew"
+						"{@condition Nauseated|HBRW} - My Homebrew",
+						"{@condition Saturated|HBRW} - My Homebrew"
 					]
 				}
 			]
