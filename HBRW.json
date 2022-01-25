@@ -1,0 +1,586 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "HBRW",
+				"abbreviation": "HBRW",
+				"full": "Homebrew",
+				"authors": [
+					"Thomas Johnston"
+				],
+				"convertedBy": [
+					"Tommo"
+				],
+				"version": "1",
+				"url": "" ,
+				"targetSchema": "1.0"
+			}
+		],
+		"dateAdded": 1643107677,
+		"dateLastModified": 1643107677
+	},
+	"monster": [
+		{
+			"name": "Green Goblin",
+			"size": "M",
+			"type": "fey",
+			"source": "HBRW",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "23d8 + 80",
+				"average": 183
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 120,
+					"condition": "(hover), on glider"
+				},
+				"canHover": true
+			},
+			"str": 22,
+			"dex": 16,
+			"con": 16,
+			"int": 25,
+			"wis": 12,
+			"cha": 15,
+			"passive": 18,
+			"cr": "21",
+			"page": 4,
+			"senses": [
+				"darkvision 120 ft.",
+				"truesight 60 ft."
+			],
+			"senseTags": [
+				"SD",
+				"U"
+			],
+			"languages": [
+				"Common",
+				"Primordial",
+				"Dwarvish",
+				"Elvish"
+			],
+			"languageTags": [
+				"C",
+				"P",
+				"D",
+				"E"
+			],
+			"save": {
+				"str": "+13",
+				"dex": "+10",
+				"int": "+14",
+				"con": "+10"
+			},
+			"skill": {
+				"acrobatics": "+10",
+				"athletics": "+13",
+				"perception": "+8",
+				"deception": "+9",
+				"investigation": "+14",
+				"intimidation": "+9",
+				"persuasion": "+9"
+			},
+			"resist": [
+				{
+					"resist": [
+						"poison"
+					]
+				},
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks"
+				}
+			],
+			"damageTags": [
+				"B",
+				"O",
+				"I",
+				"P"
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The Green Goblin makes three attacks with its pumpkin bombs. Each attack can be any of the three options. The Geen Goblin must be on his Glider to use his pumpkin bombs."
+					]
+				},
+				{
+					"name": "Pumpkin Bomb: Concussion",
+					"entries": [
+						"{@atk rw} {@hit 13} to hit, range 20/60 ft., one target. {@h}7 ({@damage 1d1+6}) bludgeoning damage, plus 27 ({@damage 5d10}) force damage as a concussive explosion is released."
+					]
+				},
+				{
+					"name": "Pumpkin Bomb: Gas Cloud",
+					"entries": [
+						"{@atk rw} {@hit 13} to hit, range 20/60 ft., one target. {@h}7 ({@damage 1d1+6}) bludgeoning damage. The creature's space fills with a green smoke which obscures vision until the start of the Green Goblin's next turn. Any creature that starts its turn inside the smoke, or moves into it for the first time on its turn, must succeed on a {@dc 22} Constitution saving throw or take 17 ({@damage 5d6}) poison damage and fall {@condition unconscious} for 1 minute, or until an action is used to shake them awake. On a success the creature takes half damage and doesn't fall {@condition unconscious}. A creature that is immune to poison is unaffected by this smoke."
+					]
+				},
+				{
+					"name": "Pumkin Bomb: Fragmentation",
+					"entries": [
+						"{@atk rw} {@hit 10} to hit, range 20/60 ft., one target. {@h}7 ({@damage 1d1+6}) bludgeoning damage. Hit or miss, the pumpkin bomb then explodes. The target and each creature within 10 feet of it must succeed on a {@dc 22} Dexterity saving throw or take ({@damage 5d6}) piercing damage, or half on a success. Constructs and objects take double the damage from this attack."
+					]
+				},
+				{
+					"name": "Trident (when off glider)",
+					"entries": [
+						"{@atk mw,rw} {@hit 13} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}9 ({@damage 1d6 + 6}) piercing damage in melee, or 9 ({@damage 1d6 + 6}) piercing damage at range, or 10 ({@damage 1d8 + 6}) piercing damage if used with both hands."
+					]
+				},
+				{
+					"name": "Sleep Gas",
+					"entries": [
+						"The Green Goblin says 'sleeeeep' and releases a puff of green smoke in an enemies face within 5 feet. The creature must succeed on a {@dc 22} Constitution saving throw or take 17 ({@damage 5d6}) poison damage and fall {@condition unconscious} for 1 minute, or until an action is used to shake them awake. On a success the creature takes half damage and doesn't fall unconcious. A creature that is immune to poison is unaffected by this smoke."
+					]
+				},
+				{
+					"name": "Razor Bats {@recharge 5}",
+					"entries": [
+						"The Green Goblin throws 5 pumpkin bombs towards a creature he can see. Each ball sprouts rotating wing-like razor blades as they home in on the target. The targeted creature must succeed on a {@dc 22} Dexterity saving throw or take {@damage 5d12} slashing damage, or half damage on a success. At the start of each turn for the next minute, the target must remake the save. The razor bat swarm can be targeted with held attacks (AC 17) as if it's in the square of the target. On a hit, one razor bat is removed and the damage decreases by {@dice 1d12}. Ropes and webbing does not impede the movement of the razor bats."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"RW",
+				"AOE",
+				"MW",
+				"THW"
+			],
+			"trait": [
+				{
+					"name": "Flyby",
+					"entries": [
+						"The Green Goblin doesn't provoke opportunity attacks when it flies out of an enemy's reach."
+					]
+				},
+				{
+					"name": "Tactical Influence",
+					"entries": [
+						"The Green Goblin approaches every situation with a keen mind. Whenever he makes a Charisma (Pursuasion) or Charimsa (Intimidation) check, he adds his intelligence modifier to the roll."
+					]
+				},
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"If the green goblin fails a saving throw, it can choose to succeed instead."
+					]
+				}
+			],
+			"traitTags": [
+				"Flyby",
+				"Legendary Resistances"
+			],
+			"conditionInflict": [
+				"charmed",
+				"frightened",
+				"unconscious"
+			],
+			"legendary": [
+				{
+					"name": "Chatter: Beguile",
+					"entries": [
+						"The Green Goblin attempts to coerce an enemy to his side. The Green Goblin makes a contested Charisma (Persuasion) vs. Wisdom (Insight) check against a creature that can hear and understands him. If successful, the creature is {@condition charmed} by the Green Goblin for 24 hours or until he is {@condition incapacitated}. If the attempt failed, the creature is immune to the {@b chatter} of the Green Goblin for 24 hours. If tied, nothing happens and the Green Goblin can attempt to influence the creature again."
+					]
+				},
+				{
+					"name": "Chatter: Scare",
+					"entries": [
+						"The Green Goblin attempts to coerce an enemy to flee. The Green Goblin makes a contested Charisma (Intimidation) vs. Wisdom (Insight) check against a creature that can hear and understands him. If successful, the creature is {@condition frightened} by the Green Goblin for 24 hours or until he is {@condition incapacitated}. If the attempt failed, the creature is immune to the {@b chatter} of the Green Goblin for 24 hours. If tied, nothing happens and the Green Goblin can attempt to influence the creature again."
+					]
+				},
+				{
+					"name": "Impale (Costs 2 actions)",
+					"entries": [
+						"The Green Goblin's Glider flies up to half its movement speed and attempts to impale a creature on its retractable blades. {@atk mw} {@hit 13} to hit, reach 5 ft., one target. {@h}17 ({@damage 2d10 + 6}) piercing damage. If the creature is medium or smaller it is {@condition restrained} and moves with the glider. The creature can remove itself from the glider as an action. The Green Goblin can only have 1 creature impaled on his glider at a time."
+					]
+				}
+			],
+			"shortName": true,
+			"bonus": [
+				{
+					"name": "Glider Movement",
+					"entries": [
+						"The Green Goblin commands his glider to move up to its movespeed. The glider can extend or retract its blades as part of its movement."
+					]
+				},
+				{
+					"name": "Modify Helmet",
+					"entries": [
+						"The Green Goblin can open and close his helmet, or his \"Horrible Yellow Eyes\"."
+					]
+				}
+			]
+		},		
+		{
+			"name": "Nintra Siotta",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "HBRW",
+			"page": 5,
+			"size": "M",
+			"type": "fey",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"condition": "(19, with shield)"
+				}
+			],
+			"hp": {
+				"formula": "29d10 + 100",
+				"average": 259
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 16,
+			"dex": 24,
+			"con": 16,
+			"int": 17,
+			"wis": 24,
+			"cha": 24,
+			"save": {
+				"str": "+8",
+				"dex": "+12",
+				"wis": "+12"
+			},
+			"skill": {
+				"deception": "+12",
+				"insight": "+12",
+				"perception": "+12"
+			},
+			"senses": [
+				"truesight 60 ft."
+			],
+			"passive": 22,
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"stunned"
+			],
+			"languages": [
+				"Common",
+				"Elvish",
+				"Sylvan"
+			],
+			"cr": "16",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"Nintra casts one of the following spells, using Charisma as the spellcasting ability (save {@dc 20}) and requiring no material components:"
+					],
+					"daily": {
+						"3e": [
+							"{@spell dispel magic}",
+							"{@spell faerie fire}",
+							"{@spell mirror image}"
+						]
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				},
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Nintra is a 20th level spellcaster. Her spellcasting ability is Wisdom (spell save {@dc 20}, {@hit 12} to hit with spell attacks) and she has the following cleric spells prepared:"
+					],
+					"footerEntries": [
+						"*This spell is in effect on Nintra at the start of the battle",
+						"**This spell is cast on her shield before the start of the battle.",
+						"***Nintra utters this as a reaction to her death ward proccing. She calls upon Demiurge to curse these wretched heathens with  rot and a swift death. Demiurge, being the embodiment of chaos, curses the party but bestows the swift death upon the true heathen as his avatar appears before the players."
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell sacred flame}",
+								"{@spell toll the dead|XGE}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell bane}",
+								"{@spell inflict wounds}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell blindness/deafness}",
+								"{@spell silence}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell remove curse}",
+								"{@spell spirit guardians}",
+								"{@spell spirit shroud|UA2020SpellsAndMagicTattoos}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell death ward}*",
+								"{@spell guardian of faith}**"
+							],
+							"slots": 1
+						},
+						"5": {
+							"spells": [
+								"{@spell contagion}",
+								"{@spell geas}",
+								"{@spell insect plague}"
+							],
+							"slots": 3
+						},
+						"6": {
+							"spells": [
+								"{@spell harm}",
+								"{@spell heal}"
+							],
+							"slots": 2
+						},
+						"7": {
+							"spells": [
+								"{@spell divine word}",
+								"{@spell fire storm}"
+							],
+							"slots": 2
+						},
+						"8": {
+							"spells": [
+								"{@spell earthquake}"
+							],
+							"slots": 1
+						},
+						"9": {
+							"spells": [
+								"{@spell wish}***"
+							],
+							"slots": 1
+						}
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (3/Day)",
+					"entries": [
+						"If Nintra fails a saving throw, she can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Master of Necromancy",
+					"entries": [
+						"Nintra can convert all damage she does into shards of Necrotic energy, and she gives herself or one of her allies temporary hit points equal to half of the damage done."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Nintra makes two attacks."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 12} to hit, reach 5 ft., one target. {@h}12 ({@damage 2d4 + 7}) piercing damage."
+					]
+				},
+				{
+					"name": "Shard of Shadow",
+					"entries": [
+						"{@atk rs} {@hit 12} to hit, range 120 ft., one target. {@h}10 ({@damage 1d6 + 7}) necrotic damage, and if the target is a creature, it must succeed on a {@dc 20} Constitution saving throw or be {@condition poisoned} until the end of its next turn."
+					]
+				},
+				{
+					"name": "Storm of Shattered Glass {@recharge}",
+					"entries": [
+						"Nintra targets a point she can see within 60 feet of her and creates a 20-foot-radius sphere of swirling glass shards centered on that point. Each creature in the sphere must make a {@dc 20} Dexterity saving throw, taking 28 ({@damage 8d6}) slashing damage on a failed save, or half as much damage on a successful save. If Nintra is in the sphere, the shards deal no damage to her."
+					]
+				}
+			],
+			"legendary": [
+				{
+					"name": "Attack",
+					"entries": [
+						"Nintra makes one attack."
+					]
+				},
+				{
+					"name": "Fey Step",
+					"entries": [
+						"Nintra teleports to an unoccupied space she can see within 30 feet of her."
+					]
+				},
+				{
+					"name": "Shadow Strikes (Costs 2 Actions)",
+					"entries": [
+						"Provided she is in bright or dim light, Nintra causes her shadow to attack a creature within 10 feet of her. Her shadow makes two claw attacks, each attack identical to Nintra's claw attack except that it deals psychic damage instead of piercing damage."
+					]
+				}
+			],
+			"legendaryGroup": {
+				"name": "Nintra Siotta",
+				"source": "CM"
+			},
+			"traitTags": [
+				"Legendary Resistances"
+			],
+			"senseTags": [
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"E",
+				"S"
+			],
+			"damageTags": [
+				"P",
+				"N",
+				"S"
+			],
+			"miscTags": [
+				"MW",
+				"AOE"
+			],
+			"conditionInflict": [
+				"poisoned"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"tokenUrl": "https://5e.tools/img/CM/Nintra Siotta.png",
+			"fluff": {
+				"name": "Nintra Siotta",
+				"source": "CM",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							"Nintra Siotta, a chaotic evil archfey who was exiled from the Gloaming Court by the Queen of Air and Darkness long ago, is known in Faerûn by three titles: Princess of the Shadow Glass, Lady of Dread Omens, and Seeker of the Three Crowns. She appears as a 9-foot-tall humanoid made of smoky gray glass, wrapped in a cloak-like darkness that appears to devour the light.",
+							"Nintra's eyes burn with green fire, and she speaks in a high, musical voice. Deception comes naturally to her, but imprisonment in{@i The Scrivener's Tale}has made her impatient and prone to telepathic outbursts that betray her cruel nature."
+						]
+					},
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"name": "Lair Actions",
+								"entries": [
+									"On initiative count 20 (losing initiative ties) Nintra can take a lair action to cause one of the following effects; she can't use the same effect two rounds in a row:",
+									{
+										"type": "list",
+										"items": [
+											"Nintra targets one pane of shadow glass in her lair, causing it to explode into shards. Each creature within 20 feet of the exploding pane must make a DC 18 Dexterity saving throw, taking 13 ({@damage 3d8}) piercing damage on a failed save, or half as much damage on a successful one. The shards fade away to vapor and the pane is restored to normal at the next initiative count 20.",
+											"Nintra targets one pane of shadow glass in her lair, briefly transforming it into a swirling vortex. One creature of her choice within 20 feet of the pane must succeed on a DC 20 Strength saving throw or be drawn into the vortex, taking 11 ({@damage 2d10}) necrotic damage. The creature is then teleported to an unoccupied space within 5 feet of another pane of shadow glass in Nintra's lair (determined randomly)."
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/CM/Nintra Siotta.jpg"
+						}
+					}
+				]
+			},
+			"spellcastingTags": [
+				"I",
+				"CC"
+			]
+		}
+	],
+	"condition": [
+		{
+			"name": "Saturated",
+			"source": "HBRW",
+			"page": 2,
+			"entries": [
+				"You are completely covered in water. You may find it difficult to enter homes and establishments. Creatures who are {@condition saturated|HBR}:",
+				{
+					"type": "list",
+					"items": [
+						"Have disadvantage on ability checks and saving throws against sources of cold damage and extreme cold",
+						"Their movement speed reduced by 5, you are immune to this effect if you have a swim speed",
+						"Cannot gain the benefits of evasion against lightning effects"
+					]
+				},
+				"Taking fire and/or lightning damage greater than 20 damage in a round renders you completely dry. Spending a minute consecutively casting {@spell prestidigitation} can remove this condition, provided you are not in heavy rain or worse. Casting {@spell shape water|XGE} can remove this condition instantaneously."
+			]
+		},
+		{
+			"name": "Nauseated",
+			"source": "HBRW",
+			"page": 3,
+			"entries": [
+				"If you eat spoiled food, or are not quite used to rolling sea travel, you may experience the {@condition nauseated|HBRW} condition. While under the effects of this condition, you must consume twice the regular amount of food and water for nourishment and cannot:",
+				{
+					"type": "list",
+					"items": [
+						"Concentrate on a spell",
+						"Make more than one attack on a given turn",
+						"Operate or man a vehicle",
+						"Take watches"
+					]
+				},
+				"A {@spell greater restoration} spell or similar effect removes this condition."
+			]
+		},
+		{
+			"name": "New Conditions",
+			"source": "HBRW",
+			"page": 1,
+			"entries": [
+				"Here is a list of all homebrewed conditions:",
+				{
+					"type": "list",
+					"items": [
+						"{@condition Bleeding|GH} - Grim Hollow",
+						"{@condition Dazed|GH} - Grim Hollow",
+						"{@condition Nauseated|HBRW} - Homebrew",
+						"{@condition Saturated|HBRW} - Homebrew"
+					]
+				}
+			]
+		}
+	]
+}
