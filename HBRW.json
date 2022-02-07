@@ -17,7 +17,10 @@
 			}
 		],
 		"dateAdded": 1643107677,
-		"dateLastModified": 1643107677
+		"dateLastModified": 1643107677,
+		"optionalFeatureTypes": {
+			"Co:UM": "Costia's Ultimate: Nature's Tenacity"
+		}
 	},
 	"monster": [
 		{
@@ -57,7 +60,7 @@
 			"cha": 15,
 			"passive": 18,
 			"cr": "21",
-			"page": 4,
+			"page": 100,
 			"senses": [
 				"darkvision 120 ft.",
 				"truesight 60 ft."
@@ -237,7 +240,7 @@
 			"isNpc": true,
 			"isNamedCreature": true,
 			"source": "HBRW",
-			"page": 5,
+			"page": 101,
 			"size": "M",
 			"type": "fey",
 			"alignment": [
@@ -580,6 +583,47 @@
 						"{@condition Saturated|HBRW} - My Homebrew"
 					]
 				}
+			]
+		}
+	],
+	"optionalfeature": [
+		{
+			"name": "Nature's Tenacity",
+			"source": "HBRW",
+			"page": 6,
+			"prerequisite": [
+				{
+					"other": "Be Costia"
+				}
+			],
+			"entries": [
+				{
+					"name": "Primary Condition",
+					"entries": [
+						"When you see a creature or plant take elemental damage (acid, cold, fire, lightning, or thunder), including allies."
+					]
+				},
+				{
+					"name": "Ultimate Ability",
+					"entries": [
+						"You call upon glowing roots to grow around you, protecting you from harm. As an action, you surround yourself with bark and vine. You gain temporary hit points equal to 5 times your character level, which lasts 1 minute. While you are surrounded by this structure, you are vulnerable to fire damage and you can make a special attack as a bonus action. This attack is magical and can target up to four enemies. This ability can be used in wild shape form."
+					]
+				},
+				{
+					"name": "Special Attack: Coiling Vine",
+					"entries": [
+						"{@atk mw} {@hit +PB+wisdom modifier} to hit, reach 30 ft., four targets. {@h} ({@damage 1d10}+wisdom modifier) bludgeoning damage and the target must succeed on a Strength Saving Throw (DC equal to your Druid Spell Save DC) or be pulled up to 30 ft. towards you and be {@condition restrained}. The creature can repeat the saving throw at the end of each of their turns."
+					]
+				},
+				{
+					"name": "Combining Effect",
+					"entries": [
+						"The glowing roots coordinate with your desire to protect your allies.  Each ally who activates their ultimate at the same time gains the following effect: Gain temporary HP equal to your current level. While you benefit from this temporary HP, you are vulnerable to fire damage and can extend your reach with melee weapons by 5."
+					]
+				}
+			],
+			"featureType":[
+				"Co:UM"
 			]
 		}
 	]
