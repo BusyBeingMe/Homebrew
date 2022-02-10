@@ -697,7 +697,7 @@
 				{
 					"name": "Combining Effect: Channeled Power",
 					"entries": [
-						"Calling on their own power, your ally becomes a conduit of your energy. Any damage done by your ally while Call of the Storm is active is not restricted by the ‘once per turn’ rule above."
+						"Calling on their own power, your ally becomes the perfect conduit for your energy. Any damage done by your ally while Call of the Storm is active is not restricted by the ‘once per turn’ rule above."
 					]
 				}
 			],
@@ -785,15 +785,15 @@
 						{
 							"type": "list",
 							"items": [
-								"{@optfeature Call of the Storm|HBRW}",
-								"{@optfeature Death Spin|HBRW}",
-								"{@optfeature Ethereal Power|HBRW}",
-								"{@optfeature Nature's Tenacity| HBRW}"
+								"Clarisse - {@optfeature Call of the Storm|HBRW}",
+								"Kansif - {@optfeature Death Spin|HBRW}",
+								"Violet - {@optfeature Ethereal Power|HBRW}",
+								"Costia - {@optfeature Nature's Tenacity| HBRW}"
 							]
 						}
 					]
 				}
 			]
-		}		
+		}
 	]
 }
