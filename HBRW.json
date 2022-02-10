@@ -19,7 +19,10 @@
 		"dateAdded": 1643107677,
 		"dateLastModified": 1643107677,
 		"optionalFeatureTypes": {
-			"Co:UM": "Costia's Ultimate: Nature's Tenacity"
+			"Co:UM": "Costia's Ultimate: Nature's Tenacity",
+			"Vi:UM": "Violet's Ultimate: Ethereal Power",
+			"Cl:UM": "Clarisse's Ultimate: Call of the Storm",
+			"Ka:UM": "Kansif's Ultimate: Death Spin"
 		}
 	},
 	"monster": [
@@ -538,7 +541,7 @@
 			"source": "HBRW",
 			"page": 2,
 			"entries": [
-				"You are completely covered in water. You may find it difficult to enter homes and establishments. Creatures who are {@condition saturated|HBR}:",
+				"You are completely covered in water. You may find it difficult to enter homes and establishments. Creatures who are {@condition saturated|HBRW}:",
 				{
 					"type": "list",
 					"items": [
@@ -616,15 +619,181 @@
 					]
 				},
 				{
-					"name": "Combining Effect",
+					"name": "Combining Effect: Natural Protection",
 					"entries": [
 						"The glowing roots coordinate with your desire to protect your allies.  Each ally who activates their ultimate at the same time gains the following effect: Gain temporary HP equal to your current level. While you benefit from this temporary HP, you are vulnerable to fire damage and can extend your reach with melee weapons by 5."
 					]
 				}
 			],
-			"featureType":[
+			"featureType": [
 				"Co:UM"
 			]
+		},
+		{
+			"name": "Ethereal Power",
+			"source": "HBRW",
+			"page": 7,
+			"prerequisite": [
+				{
+					"other": "Be Violet"
+				}
+			],
+			"entries": [
+				{
+					"name": "Primary Condition",
+					"entries": [
+						"Whenever you teleport."
+					]
+				},
+				{
+					"name": "Ultimate Ability",
+					"entries": [
+						"Your connection to the ethereal realm strengthens as you feel yourself become transparent. Your ult lasts for 1 minute, during your ultimate you gain the following effects:",
+						{
+							"type": "list",
+							"items": [
+								"You can become invisible or reveal yourself as a free action. Nothing can break this invisibility, not even anti-magic fields, but those who can see invisible creatures and into the ethereal plane can see you.",
+								"You become impossible to track, except by magical means.",
+								"You can teleport up to 90ft as a bonus action.",
+								"When you hit with a weapon attack, you can expend a hit dice and roll it, adding the roll to the weapon's damage. When you use this feature, the weapon's damage becomes magical and does not consume ammunition."
+							]
+						}
+					]
+				},
+				{
+					"name": "Combining Effect: Confer Spectrality",
+					"entries": [
+						"The ethereal realm seems to leak from you, giving your allies a taste of your strength. While your ultimate is active, your ally may choose to teleport up to 90 feet as part of their movement, gaining resistance to non-magical bludgeoning, piercing, and slashing damage until the end of their next turn."
+					]
+				}
+			],
+			"featureType": [
+				"Vi:UM"
+			]
+		},
+		{
+			"name": "Call of the Storm",
+			"source": "HBRW",
+			"page": 8,
+			"prerequisite": [
+				{
+					"other": "Be Clarisse"
+				}
+			],
+			"entries": [
+				{
+					"name": "Primary Condition",
+					"entries": [
+						"When you roll max damage on a die."
+					]
+				},
+				{
+					"name": "Ultimate Ability",
+					"entries": [
+						"The smell of ozone fills the air, electricity buzzing at your fingertips. The weather turns dark as you conjure a dark cloud above the battlefield. As an action, you conjure a dark, magical, swirling mass of raincloud which appears 60 ft. above your head and follows you. This cloud has a radius of 30 ft and must have the room to fit, otherwise the ability does not activate (you do not lose ultimate charge). Once on their turn, you and any ally underneath this cloud can each deal additional lightning and thunder damage to a single target, or two targets within 10ft of each other, on top of any damage they are already doing to that target. The damage is equal to twice your character level (half lightning, half thunder). Damage done in this way is considered as originating from the caster of Call of the Storm, for the purposes of calculating resistances and vulnerabilities.",
+						"While Call of the Storm is active, the caster may use a bonus action to make a ranged spell attack against a single target underneath the cloud. On a hit, the target takes lightning and thunder damage equal to twice your character level (half lightning, half thunder), the sound from the thunder ringing out to 300 feet. At the end of your next turn, the cloud rapidly expands to a 1-mile radius originating from you or fills the room it is in, lightly obscuring vision with a thin fog. All other effects end, and the cloud begins to precipitate, drenching the battlefield with monsoon-level rain for 1 minute."
+					]
+				},
+				{
+					"name": "Combining Effect: Channeled Power",
+					"entries": [
+						"Calling on their own power, your ally becomes a conduit of your energy. Any damage done by your ally while Call of the Storm is active is not restricted by the ‘once per turn’ rule above."
+					]
+				}
+			],
+			"featureType": [
+				"Cl:UM"
+			]
+		},
+		{
+			"name": "Death Spin",
+			"source": "HBRW",
+			"page": 9,
+			"prerequisite": [
+				{
+					"other": "Be Kansif"
+				}
+			],
+			"entries": [
+				{
+					"name": "Primary Condition",
+					"entries": [
+						"When you take damage from a hostile creature."
+					]
+				},
+				{
+					"name": "Ultimate Ability",
+					"entries": [
+						"You begin spinning wildly, felling every enemy around you. As an action, you begin to spin around. The spinning lasts until the end of your next turn, or until you dismiss it (you can do this at any time). While Death Spin is active, you gain the following effects:",
+						{
+							"type": "list",
+							"items": [
+								"You cannot be disarmed of your weapon(s).",
+								"You cannot be charmed or frightened, and gain resistance to psychic damage, as you have achieved great focus.",
+								"Any creature of your choice within the weapon’s melee range is automatically hit, you may roll a d20 to see if you crit. The weapon does its normal damage, including any bonuses you might have"
+							]
+						},
+						"When Death Spin ends, you may choose to throw your weapon. Make a thrown weapon attack with the weapon you are holding (range 20/60). On a hit, the weapon does its normal damage (unless it has bonuses to thrown attacks already)."
+					]
+				},
+				{
+					"name": "Combining Effect: Guardian Weapon",
+					"entries": [
+						"The best defence is a good offence…",
+						"A spectral weapon of the same type used in Death Spin appears next to them. Any enemy that moves within 5 feet of you while Death Spin is active takes an attack of opportunity using Kansif’s attack modifiers for that weapon. This weapon does force damage and does not take a reaction to make the attack."
+					]
+				}
+			],
+			"featureType": [
+				"Ka:UM"
+			]
 		}
+	],
+	"variantrule": [
+		{
+			"name": "Optional Rule: Ultimates",
+			"source": "HBRW",
+			"page": 5,
+			"ruleType": "O",
+			"type": "section",
+			"entries": [
+				"Ultimates allow players to have a unique and powerful feature at their fingertips. These are usually fight-ending abilities which must be charged before they can be utilised. Ultimates can also be introduced as a way to raise the stakes for resting, making players weigh the benefits of the rest against losing their ultimate charge. It is imperitive that all players and the DM agrees to using ultimates.",
+				{
+					"name": "Charging an Ultimate",
+					"entries": [
+						"Players will be given an in-game condition, called their {@b Primary Condition}, that they have to meet based on their class, subclass, transformation, or something that makes their character unique in the campaign.",
+						"Once they meet this condition, the player can roll a d10 and add it to a total called their {@b Ultimate Meter}. An ultimate meter loses all of its charge at the end of a short or long rest. Once an ultimate is used, you cannot charge it again until the completion of a long rest. The ability to charge an ultimate is limited to rounds: You may only charge your ultimate once per round, regaining the ability to do so at the start of your next turn."
+					]
+				},
+				{
+					"name": "Using an Ultimate",
+					"entries": [
+						"Once the total charge in an ultimate meter reaches a certain amount agreed upon by the DM {@b (15)}, you can activate a special and powerful ability as an action, unless otherwise specified.",
+						"Holding an ultimate is run similar to concentration, where it can be interrupted. You do not lose charge if your ultimate is interrupted, but you will need to cast it again. Holding concentration on an ultimate does not end other concentration effects. It does, however, reveal hideous appearances from player transformations."
+					]
+				},
+				{
+					"name": "Combining Ultimates",
+					"entries": [
+						"Ultimate abilities can have powerful interactions with others, called its {@b Combining Effect}. This is achievable as long as the players are within 15 feet of each other and activate them ‘at the same time’ (during their combined turns as an action or as a held action)."
+					]
+				},
+				{
+					"name": "List of Current Ultimates",
+					"entries": [
+						"A list of ultimates the current players have is detailed below:",
+						{
+							"type": "list",
+							"items": [
+								"{@optfeature Call of the Storm|HBRW}",
+								"{@optfeature Death Spin|HBRW}",
+								"{@optfeature Ethereal Power|HBRW}",
+								"{@optfeature Nature's Tenacity| HBRW}"
+							]
+						}
+					]
+				}
+			]
+		}		
 	]
 }
